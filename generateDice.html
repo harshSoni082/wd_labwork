@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Random Dice Simulator
+        </title>
+        <style>
+            li
+            {
+                display: inline;
+                list-style: none;
+            }
+        </style>
+        <script>
+            function randomGenerator(B, U)
+            {
+                return Math.floor(B + Math.random()*6);
+            }
+            function simulateDice(times)
+            {
+                document.writeln('<h1>Random Dice Numbers</h1><ol>')
+                for(var i=0; i<times; i++)
+                {
+                    document.write('<li>'+randomGenerator(1, 6)+', </li>');
+                }
+                document.write('</ol>')
+            }
+            window.addEventListener('load', simulateDice(30), false);
+        </script>
+    </head>
+
+    <body>
+    </body>
+</html>
