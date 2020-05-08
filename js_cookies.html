@@ -5,13 +5,11 @@
         <script>
             function setCookie()
             {
-                var inputs = document.getElementsByTagName("input")[0];
-                //for(var i=0; i<inputs.length; i++)
-                //{
-                //    document.cookie += inputs[i].id + "=" + inputs[i].value + ";";
-                //    alert(document.cookie);
-                //}
-                document.cookie = inputs.id + "=" + inputs.value + ";";
+                var inputs = document.getElementsByTagName("input");
+                for(var i=0; i<inputs.length; i++)
+                {
+                    document.cookie = inputs[i].id + "=" + inputs[i].value + ";";
+                }
                 alert(document.cookie);
 
             }
