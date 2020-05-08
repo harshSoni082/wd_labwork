@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Cookies</title>
+        <script>
+            function setCookie()
+            {
+                var inputs = document.getElementsByTagName("input")[0];
+                //for(var i=0; i<inputs.length; i++)
+                //{
+                //    document.cookie += inputs[i].id + "=" + inputs[i].value + ";";
+                //    alert(document.cookie);
+                //}
+                document.cookie = inputs.id + "=" + inputs.value + ";";
+                alert(document.cookie);
+
+            }
+            function start()
+            {
+                var sBtn = document.getElementById('submit-btn');
+                sBtn.addEventListener('click', 
+                                      setCookie, 
+                                      false);
+            }
+            window.addEventListener('load', start, false);
+        </script>
+    
+        <style>
+            input
+            {
+                padding: 0.5% 5% 0.5% 1%;
+                font-size: 0.8vw;
+            }
+            input:focus
+            {
+                outline: none;
+            }
+            #submit-btn
+            {
+                padding: 0.5% 3% 0.5% 3%;
+                font-size: 0.8vw;
+                background-color: #888787;   
+                color: white;
+            }
+            #submit-btn:focus
+            {
+                outline: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form id="reg-form">
+            <input id="f_nme" type="text" placeholder="First Name" name="usrnme"/>
+            <input id="l_nme" type="text" placeholder="Last Name" name="usrnme"/>
+            <input id="desc" type="text" placeholder="Description" name="usrnme"/>
+            <button id="submit-btn" value="Submit" name="submit">Submit</button>
+        </form>
+    </body>
+</html>

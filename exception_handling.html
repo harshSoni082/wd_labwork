@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Cookies</title>
+        <script>
+            function exeptionHandling()
+            {
+                var num = 36;
+                try
+                {
+                    document.write(num.toUpper());
+                }
+                catch(e)
+                {
+                    alert(e.name);
+                }
+                finally
+                {
+                    document.write("<br>Printing finally");
+                }
+
+            }
+            function start()
+            {
+                var sBtn = document.getElementById('submit-btn');
+                sBtn.addEventListener('click', 
+                                      exeptionHandling, 
+                                      false);
+            }
+            window.addEventListener('load', start, false);
+        </script>
+    
+        <style>
+            #submit-btn
+            {
+                padding: 0.5% 3% 0.5% 3%;
+                font-size: 0.8vw;
+                background-color: #888787;   
+                color: white;
+            }
+            #submit-btn:focus
+            {
+                outline: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <button id="submit-btn" name="submit">Generate Exception</button>
+    </body>
+</html>
